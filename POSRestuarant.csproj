@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{51AF771B-124C-4B70-B399-02B2E4C00E2C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>POSRestuarant</RootNamespace>
+    <AssemblyName>POSRestuarant</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="POSRestuarantBackEnd, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\POSRestuarantBackEnd\bin\Debug\POSRestuarantBackEnd.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Compression.Base, Version=27.1462.48.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Core.WinForms, Version=27.1462.48.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Data.WinForms, Version=27.1462.48.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Grid.Windows, Version=27.1462.48.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.GridCommon.WinForms, Version=27.1462.48.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.SfDataGrid.WinForms, Version=27.1462.48.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.SfInput.WinForms, Version=27.1462.48.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.SfListView.WinForms, Version=27.1462.48.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Shared.Base, Version=27.1462.48.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Shared.Windows, Version=27.1462.48.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Spreadsheet.Windows, Version=27.1462.48.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Tools.Windows, Version=27.1462.48.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.XlsIO.Base, Version=27.1462.48.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassesBackEndProcess\ClsMain.cs" />
+    <Compile Include="FormUI\Custome Controls\Custome Panel\CustomePanelOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormUI\Custome Controls\Custome Panel\CustomePanelOrder.Designer.cs">
+      <DependentUpon>CustomePanelOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUI\Custome Controls\RoundCornerControls\RoundBorder.cs" />
+    <Compile Include="FormUI\Custome Controls\RoundFlowLayoutPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormUI\FRMMain\FRMDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUI\FRMMain\FRMDashboard.Designer.cs">
+      <DependentUpon>FRMDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUI\FRMMain\FRMMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUI\FRMMain\FRMMain.Designer.cs">
+      <DependentUpon>FRMMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUI\FRMMain\FRMMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUI\FRMMain\FRMMenu.Designer.cs">
+      <DependentUpon>FRMMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUI\FRMMain\FRMOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUI\FRMMain\FRMOrders.Designer.cs">
+      <DependentUpon>FRMOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUI\FRMMain\FRMTables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUI\FRMMain\FRMTables.Designer.cs">
+      <DependentUpon>FRMTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMLogin.Designer.cs">
+      <DependentUpon>FRMLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUI\FRMRegisterDatabase\FRMRegisteration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUI\FRMRegisterDatabase\FRMRegisteration.Designer.cs">
+      <DependentUpon>FRMRegisteration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormUI\Custome Controls\Custome Panel\CustomePanelOrder.resx">
+      <DependentUpon>CustomePanelOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUI\FRMMain\FRMDashboard.resx">
+      <DependentUpon>FRMDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUI\FRMMain\FRMMain.resx">
+      <DependentUpon>FRMMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUI\FRMMain\FRMMenu.resx">
+      <DependentUpon>FRMMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUI\FRMMain\FRMOrders.resx">
+      <DependentUpon>FRMOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUI\FRMMain\FRMTables.resx">
+      <DependentUpon>FRMTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMLogin.resx">
+      <DependentUpon>FRMLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUI\FRMRegisterDatabase\FRMRegisteration.resx">
+      <DependentUpon>FRMRegisteration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\Table Image\Avaiable Table 4 Seats.png" />
+    <Content Include="Images\Table Image\Avaiable Table 6 Seats.png" />
+    <Content Include="Images\Table Image\Booked Table 4 Seats.png" />
+    <Content Include="Images\Table Image\Booked Table 6 Seats.png" />
+    <Content Include="Images\Table Image\Dining Table 4 Seats.png" />
+    <Content Include="Images\Table Image\Dining Table 6 Seats.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
