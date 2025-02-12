@@ -30,8 +30,6 @@
         {
             this.BtnSave = new System.Windows.Forms.Button();
             this.BtnExit = new System.Windows.Forms.Button();
-            this.CboChooseExistingDB = new System.Windows.Forms.ComboBox();
-            this.ChkExistingDB = new System.Windows.Forms.RadioButton();
             this.ChkCreateNewDB = new System.Windows.Forms.RadioButton();
             this.TxtCreateNewDB = new System.Windows.Forms.TextBox();
             this.TxtPassword = new System.Windows.Forms.TextBox();
@@ -56,7 +54,7 @@
             this.BtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSave.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.BtnSave.ForeColor = System.Drawing.Color.White;
-            this.BtnSave.Location = new System.Drawing.Point(359, 528);
+            this.BtnSave.Location = new System.Drawing.Point(359, 458);
             this.BtnSave.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(151, 45);
@@ -72,39 +70,13 @@
             this.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnExit.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.BtnExit.ForeColor = System.Drawing.Color.White;
-            this.BtnExit.Location = new System.Drawing.Point(123, 528);
+            this.BtnExit.Location = new System.Drawing.Point(123, 458);
             this.BtnExit.Name = "BtnExit";
             this.BtnExit.Size = new System.Drawing.Size(151, 45);
             this.BtnExit.TabIndex = 18;
             this.BtnExit.Text = "Exit";
             this.BtnExit.UseVisualStyleBackColor = false;
             this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
-            // 
-            // CboChooseExistingDB
-            // 
-            this.CboChooseExistingDB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.CboChooseExistingDB.Enabled = false;
-            this.CboChooseExistingDB.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.CboChooseExistingDB.FormattingEnabled = true;
-            this.CboChooseExistingDB.Location = new System.Drawing.Point(297, 477);
-            this.CboChooseExistingDB.Margin = new System.Windows.Forms.Padding(20);
-            this.CboChooseExistingDB.Name = "CboChooseExistingDB";
-            this.CboChooseExistingDB.Size = new System.Drawing.Size(213, 24);
-            this.CboChooseExistingDB.TabIndex = 16;
-            // 
-            // ChkExistingDB
-            // 
-            this.ChkExistingDB.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.ChkExistingDB.AutoSize = true;
-            this.ChkExistingDB.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.ChkExistingDB.Location = new System.Drawing.Point(53, 479);
-            this.ChkExistingDB.Name = "ChkExistingDB";
-            this.ChkExistingDB.Size = new System.Drawing.Size(193, 21);
-            this.ChkExistingDB.TabIndex = 14;
-            this.ChkExistingDB.TabStop = true;
-            this.ChkExistingDB.Text = "Choose Existing Database :";
-            this.ChkExistingDB.UseVisualStyleBackColor = true;
-            this.ChkExistingDB.CheckedChanged += new System.EventHandler(this.ChkExistingDB_CheckedChanged);
             // 
             // ChkCreateNewDB
             // 
@@ -142,7 +114,6 @@
             this.TxtPassword.TabIndex = 11;
             this.TxtPassword.UseSystemPasswordChar = true;
             this.TxtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPassword_KeyPress);
-            this.TxtPassword.Leave += new System.EventHandler(this.TxtPassword_Leave);
             // 
             // lblPassword
             // 
@@ -242,14 +213,12 @@
             this.tableLayoutPanel2.Controls.Add(this.TxtUserID, 2, 2);
             this.tableLayoutPanel2.Controls.Add(this.TxtPassword, 2, 3);
             this.tableLayoutPanel2.Controls.Add(this.TxtCreateNewDB, 2, 4);
-            this.tableLayoutPanel2.Controls.Add(this.CboChooseExistingDB, 2, 5);
-            this.tableLayoutPanel2.Controls.Add(this.ChkExistingDB, 1, 5);
             this.tableLayoutPanel2.Controls.Add(this.ChkCreateNewDB, 1, 4);
             this.tableLayoutPanel2.Controls.Add(this.lblPassword, 1, 3);
             this.tableLayoutPanel2.Controls.Add(this.lblServerName, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.BtnSave, 2, 6);
-            this.tableLayoutPanel2.Controls.Add(this.BtnExit, 1, 6);
             this.tableLayoutPanel2.Controls.Add(this.lblUserID, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.BtnExit, 1, 5);
+            this.tableLayoutPanel2.Controls.Add(this.BtnSave, 2, 5);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(541, 4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 7;
@@ -306,8 +275,6 @@
 
         private System.Windows.Forms.Button BtnSave;
         private System.Windows.Forms.Button BtnExit;
-        private System.Windows.Forms.ComboBox CboChooseExistingDB;
-        private System.Windows.Forms.RadioButton ChkExistingDB;
         private System.Windows.Forms.RadioButton ChkCreateNewDB;
         private System.Windows.Forms.TextBox TxtCreateNewDB;
         private System.Windows.Forms.TextBox TxtPassword;

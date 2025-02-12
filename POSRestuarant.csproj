@@ -172,13 +172,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="Images\Table Image\Avaiable Table 4 Seats.png" />
-    <Content Include="Images\Table Image\Avaiable Table 6 Seats.png" />
-    <Content Include="Images\Table Image\Booked Table 4 Seats.png" />
-    <Content Include="Images\Table Image\Booked Table 6 Seats.png" />
-    <Content Include="Images\Table Image\Dining Table 4 Seats.png" />
-    <Content Include="Images\Table Image\Dining Table 6 Seats.png" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -30,7 +30,6 @@ namespace POSRestuarant.FormUI.FRMMain
         private void FRMTables_Load(object sender, EventArgs e)
         {
             LoadTableToForm();
-            objRoundControls.RoundButton(BtnSetToDefault);
         }
         private void LoadTableToForm()
         {
@@ -95,7 +94,7 @@ namespace POSRestuarant.FormUI.FRMMain
                     }
                     picTable.Size = new Size(width, height);
                     picTable.Location = new Point(x, y);
-                    //picTable.Click += new EventHandler(picTable_Click);
+                    picTable.DoubleClick += new EventHandler(picTable_DoubleClick);
                     picTable.MouseDown += new MouseEventHandler(PictureBox_MouseDown);
                     picTable.MouseMove += new MouseEventHandler(PictureBox_MouseMove);
                     picTable.MouseUp += new MouseEventHandler(PictureBox_MouseUp);
@@ -107,6 +106,13 @@ namespace POSRestuarant.FormUI.FRMMain
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void picTable_DoubleClick(object sender, EventArgs e)
+        {
+            PictureBox picClicked = (PictureBox)sender;
+            string TableID = picClicked.Name;
+            MessageBox.Show(TableID);
         }
         private void PictureBox_MouseDown(object sender, MouseEventArgs e)
         {
@@ -136,9 +142,5 @@ namespace POSRestuarant.FormUI.FRMMain
             isDragging = false;
         }
 
-        private void BtnSetToDefault_Click(object sender, EventArgs e)
-        {
-            objTable.SetTableToDefault();
-        }
     }
 }

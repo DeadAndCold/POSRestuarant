@@ -28,16 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRMTables));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.PanelTables = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.button5 = new System.Windows.Forms.Button();
-            this.BtnSetToDefault = new System.Windows.Forms.Button();
+            this.PanelTables = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -115,22 +113,11 @@
             this.button3.Text = "button1";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // PanelTables
-            // 
-            this.PanelTables.AutoScroll = true;
-            this.PanelTables.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelTables.Location = new System.Drawing.Point(3, 75);
-            this.PanelTables.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.PanelTables.Name = "PanelTables";
-            this.PanelTables.Size = new System.Drawing.Size(1449, 933);
-            this.PanelTables.TabIndex = 2;
-            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Controls.Add(this.BtnSetToDefault, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.button5, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(1147, 0);
@@ -138,7 +125,7 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 70F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(308, 70);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
@@ -152,26 +139,15 @@
             this.button5.Text = "button4";
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // BtnSetToDefault
+            // PanelTables
             // 
-            this.BtnSetToDefault.BackColor = System.Drawing.Color.DarkBlue;
-            this.BtnSetToDefault.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnSetToDefault.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.BtnSetToDefault.FlatAppearance.BorderSize = 0;
-            this.BtnSetToDefault.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSetToDefault.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold);
-            this.BtnSetToDefault.ForeColor = System.Drawing.Color.White;
-            this.BtnSetToDefault.Image = ((System.Drawing.Image)(resources.GetObject("BtnSetToDefault.Image")));
-            this.BtnSetToDefault.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnSetToDefault.Location = new System.Drawing.Point(0, 0);
-            this.BtnSetToDefault.Margin = new System.Windows.Forms.Padding(0);
-            this.BtnSetToDefault.Name = "BtnSetToDefault";
-            this.BtnSetToDefault.Size = new System.Drawing.Size(154, 70);
-            this.BtnSetToDefault.TabIndex = 3;
-            this.BtnSetToDefault.Text = "Default";
-            this.BtnSetToDefault.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BtnSetToDefault.UseVisualStyleBackColor = false;
-            this.BtnSetToDefault.Click += new System.EventHandler(this.BtnSetToDefault_Click);
+            this.PanelTables.AutoScroll = true;
+            this.PanelTables.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelTables.Location = new System.Drawing.Point(3, 75);
+            this.PanelTables.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.PanelTables.Name = "PanelTables";
+            this.PanelTables.Size = new System.Drawing.Size(1449, 933);
+            this.PanelTables.TabIndex = 2;
             // 
             // FRMTables
             // 
@@ -202,6 +178,5 @@
         private System.Windows.Forms.Panel PanelTables;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button BtnSetToDefault;
     }
 }
