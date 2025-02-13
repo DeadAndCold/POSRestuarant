@@ -26,6 +26,7 @@ namespace POSRestuarant.FormUI.FRMMain
         bool frmMenuVisible = false;
         bool frmOrdersVisible = false;
         bool frmTablesVisible = false;
+        public static bool isNavigationExpand = true;
         public FRMMain()
         {
             InitializeComponent();
@@ -140,6 +141,7 @@ namespace POSRestuarant.FormUI.FRMMain
                         frmTables.Size = tlpFormContainer.ClientSize;
                     }
                 }
+                isNavigationExpand = false;
             }
             else
             {
@@ -175,6 +177,7 @@ namespace POSRestuarant.FormUI.FRMMain
                 if (tlpForm.ColumnStyles[0].Width >= 225)
                 {
                     isExpand = true;
+                    isNavigationExpand = true;
                     navigationBar.Stop();
                     tlpFormContainer.Visible = true;
                     if (frmMenuVisible == true)
@@ -248,6 +251,7 @@ namespace POSRestuarant.FormUI.FRMMain
                 FRMDashboard.FormBorderStyle = FormBorderStyle.None;
                 FRMDashboard.Visible = true;
                 tlpFormContainer.Controls.Add(FRMDashboard);
+                FRMDashboard.Show();
             }
             else if (FormName.ToUpper() == "FRMMENU")
             {
@@ -258,6 +262,7 @@ namespace POSRestuarant.FormUI.FRMMain
                 frmMenu.FormBorderStyle = FormBorderStyle.None;
                 frmMenu.Visible = true;
                 tlpFormContainer.Controls.Add(frmMenu);
+                frmMenu.Show();
             }
             else if (FormName.ToUpper() == "FRMORDERS")
             {
@@ -268,6 +273,7 @@ namespace POSRestuarant.FormUI.FRMMain
                 frmOrders.FormBorderStyle = FormBorderStyle.None;
                 frmOrders.Visible = true;
                 tlpFormContainer.Controls.Add(frmOrders);
+                frmOrders.Show();
             }
             else if (FormName.ToUpper() == "FRMTABLES")
             {
@@ -278,6 +284,7 @@ namespace POSRestuarant.FormUI.FRMMain
                 frmTables.FormBorderStyle = FormBorderStyle.None;
                 frmTables.Visible = true;
                 tlpFormContainer.Controls.Add(frmTables);
+                frmTables.Show();
             }
         }
 

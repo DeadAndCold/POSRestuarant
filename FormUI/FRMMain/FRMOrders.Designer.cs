@@ -39,8 +39,9 @@
             this.PanelForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelForm.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.PanelForm.Location = new System.Drawing.Point(0, 0);
+            this.PanelForm.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.PanelForm.Name = "PanelForm";
-            this.PanelForm.Size = new System.Drawing.Size(1942, 853);
+            this.PanelForm.Size = new System.Drawing.Size(1456, 1013);
             this.PanelForm.TabIndex = 0;
             this.PanelForm.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelForm_Paint);
             // 
@@ -48,22 +49,21 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 30F);
-            this.label1.Location = new System.Drawing.Point(53, 1);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(40, 1);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(172, 60);
+            this.label1.Size = new System.Drawing.Size(137, 48);
             this.label1.TabIndex = 1;
             this.label1.Text = "Orders";
             // 
             // FRMOrders
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1942, 853);
+            this.ClientSize = new System.Drawing.Size(1456, 1013);
             this.Controls.Add(this.PanelForm);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FRMOrders";
             this.Text = "FRMOrders";
             this.PanelForm.ResumeLayout(false);

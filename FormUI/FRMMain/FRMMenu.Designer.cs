@@ -34,16 +34,23 @@
             this.TlpMenu = new System.Windows.Forms.TableLayoutPanel();
             this.FlpItems = new System.Windows.Forms.FlowLayoutPanel();
             this.PnTest = new System.Windows.Forms.Panel();
+            this.BtnPay = new System.Windows.Forms.Button();
+            this.PanelOrderDetail = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblBorderline = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblOrderDetail = new System.Windows.Forms.Label();
+            this.FlpOrderDetial = new System.Windows.Forms.FlowLayoutPanel();
             this.TlpForm.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.TlpMenu.SuspendLayout();
             this.PnTest.SuspendLayout();
+            this.PanelOrderDetail.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // TlpForm
@@ -75,7 +82,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1432, 44);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
@@ -118,78 +125,136 @@
             // PnTest
             // 
             this.PnTest.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PnTest.Controls.Add(this.label6);
-            this.PnTest.Controls.Add(this.label4);
-            this.PnTest.Controls.Add(this.label3);
-            this.PnTest.Controls.Add(this.label2);
-            this.PnTest.Controls.Add(this.label5);
-            this.PnTest.Controls.Add(this.label1);
+            this.PnTest.Controls.Add(this.BtnPay);
+            this.PnTest.Controls.Add(this.PanelOrderDetail);
             this.PnTest.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PnTest.Location = new System.Drawing.Point(1094, 3);
-            this.PnTest.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
+            this.PnTest.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.PnTest.Name = "PnTest";
-            this.PnTest.Size = new System.Drawing.Size(361, 957);
+            this.PnTest.Size = new System.Drawing.Size(361, 960);
             this.PnTest.TabIndex = 3;
+            // 
+            // BtnPay
+            // 
+            this.BtnPay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnPay.BackColor = System.Drawing.Color.DarkBlue;
+            this.BtnPay.FlatAppearance.BorderSize = 0;
+            this.BtnPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnPay.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnPay.ForeColor = System.Drawing.Color.White;
+            this.BtnPay.Location = new System.Drawing.Point(32, 753);
+            this.BtnPay.Name = "BtnPay";
+            this.BtnPay.Size = new System.Drawing.Size(298, 59);
+            this.BtnPay.TabIndex = 8;
+            this.BtnPay.Text = "Pay";
+            this.BtnPay.UseVisualStyleBackColor = false;
+            // 
+            // PanelOrderDetail
+            // 
+            this.PanelOrderDetail.AutoScroll = true;
+            this.PanelOrderDetail.Controls.Add(this.tableLayoutPanel2);
+            this.PanelOrderDetail.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelOrderDetail.Location = new System.Drawing.Point(0, 0);
+            this.PanelOrderDetail.Margin = new System.Windows.Forms.Padding(0);
+            this.PanelOrderDetail.Name = "PanelOrderDetail";
+            this.PanelOrderDetail.Size = new System.Drawing.Size(359, 726);
+            this.PanelOrderDetail.TabIndex = 0;
+            this.PanelOrderDetail.SizeChanged += new System.EventHandler(this.PanelOrderDetail_SizeChanged);
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Controls.Add(this.panel1, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.FlpOrderDetial, 0, 1);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(359, 726);
+            this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.lblBorderline);
+            this.panel1.Controls.Add(this.lblDate);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.lblOrderDetail);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(353, 211);
+            this.panel1.TabIndex = 0;
+            // 
+            // lblBorderline
+            // 
+            this.lblBorderline.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblBorderline.BackColor = System.Drawing.Color.LightGray;
+            this.lblBorderline.Font = new System.Drawing.Font("Khmer OS System", 10F);
+            this.lblBorderline.Location = new System.Drawing.Point(25, 133);
+            this.lblBorderline.Name = "lblBorderline";
+            this.lblBorderline.Size = new System.Drawing.Size(303, 2);
+            this.lblBorderline.TabIndex = 8;
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.lblDate.ForeColor = System.Drawing.Color.DimGray;
+            this.lblDate.Location = new System.Drawing.Point(25, 94);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(70, 17);
+            this.lblDate.TabIndex = 9;
+            this.lblDate.Text = "Date Time";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Khmer OS System", 15F);
-            this.label1.Location = new System.Drawing.Point(26, 20);
+            this.label1.Location = new System.Drawing.Point(25, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 36);
-            this.label1.TabIndex = 0;
+            this.label1.TabIndex = 12;
             this.label1.Text = "label1";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Khmer OS System", 10F);
-            this.label2.Location = new System.Drawing.Point(27, 56);
+            this.label2.Location = new System.Drawing.Point(25, 52);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 25);
-            this.label2.TabIndex = 0;
+            this.label2.TabIndex = 10;
             this.label2.Text = "label1";
             // 
-            // label3
+            // lblOrderDetail
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Khmer OS System", 10F);
-            this.label3.Location = new System.Drawing.Point(27, 106);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(153, 25);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "asdasdadasdaswdaas";
+            this.lblOrderDetail.AutoSize = true;
+            this.lblOrderDetail.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOrderDetail.Location = new System.Drawing.Point(25, 159);
+            this.lblOrderDetail.Name = "lblOrderDetail";
+            this.lblOrderDetail.Size = new System.Drawing.Size(156, 29);
+            this.lblOrderDetail.TabIndex = 11;
+            this.lblOrderDetail.Text = "Order Detail ";
             // 
-            // label4
+            // FlpOrderDetial
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.BackColor = System.Drawing.Color.LightGray;
-            this.label4.Font = new System.Drawing.Font("Khmer OS System", 10F);
-            this.label4.Location = new System.Drawing.Point(27, 146);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(303, 2);
-            this.label4.TabIndex = 0;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Khmer OS System", 18F);
-            this.label5.Location = new System.Drawing.Point(24, 169);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 43);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "label1";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.BackColor = System.Drawing.Color.LightGray;
-            this.label6.Font = new System.Drawing.Font("Khmer OS System", 10F);
-            this.label6.Location = new System.Drawing.Point(27, 278);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(303, 2);
-            this.label6.TabIndex = 0;
+            this.FlpOrderDetial.AutoScroll = true;
+            this.FlpOrderDetial.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FlpOrderDetial.Location = new System.Drawing.Point(0, 217);
+            this.FlpOrderDetial.Margin = new System.Windows.Forms.Padding(0);
+            this.FlpOrderDetial.Name = "FlpOrderDetial";
+            this.FlpOrderDetial.Size = new System.Drawing.Size(359, 509);
+            this.FlpOrderDetial.TabIndex = 1;
             // 
             // FRMMenu
             // 
@@ -207,7 +272,10 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.TlpMenu.ResumeLayout(false);
             this.PnTest.ResumeLayout(false);
-            this.PnTest.PerformLayout();
+            this.PanelOrderDetail.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -220,11 +288,15 @@
         private System.Windows.Forms.TableLayoutPanel TlpMenu;
         private System.Windows.Forms.FlowLayoutPanel FlpItems;
         private System.Windows.Forms.Panel PnTest;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button BtnPay;
+        private System.Windows.Forms.Panel PanelOrderDetail;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblBorderline;
+        private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblOrderDetail;
+        private System.Windows.Forms.FlowLayoutPanel FlpOrderDetial;
     }
 }
